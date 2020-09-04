@@ -1,8 +1,6 @@
 from student import StudentDB
 import pytest
 
-# db = None
-
 
 @pytest.fixture(scope='module')
 def db():
@@ -14,6 +12,8 @@ def db():
     db.close()
 
 
+# we can either use  the above (db method) or setup and teardown to close connections.
+# db = None
 '''
 # setup and teardown
 def setup_module(module):
